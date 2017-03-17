@@ -63,7 +63,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="2Tz-b1-McH">
             <objects>
                 <viewController id="uhl-RB-FCU" sceneMemberID="viewController">
@@ -76,16 +76,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="H9X-AJ-Udy"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-7" id="H9X-AJ-Udy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPy-PO-6YN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.875" y="33.802816901408448"/>
+            <point key="canvasLocation" x="1877" y="19"/>
         </scene>
-        <!--Item-->
+        <!--Capture-->
         <scene sceneID="oVa-7Q-98R">
             <objects>
-                <viewController id="Y4l-yY-E3c" sceneMemberID="viewController">
+                <viewController id="Y4l-yY-E3c" customClass="CaptureViewController" customModule="InstaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qcu-G9-ggK"/>
                         <viewControllerLayoutGuide type="bottom" id="LwZ-Oh-sce"/>
@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HGk-sh-GYp"/>
+                    <tabBarItem key="tabBarItem" title="Capture" image="camera-7" id="HGk-sh-GYp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a04-Vu-i3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,4 +120,8 @@
             <point key="canvasLocation" x="879.375" y="33.802816901408448"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera-7" width="30" height="30"/>
+        <image name="home-7" width="30" height="30"/>
+    </resources>
 </document>

@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewcontroller = storyboard.instantiateViewController(withIdentifier: "TabNavigationController")
+
             window?.rootViewController = viewcontroller
         } else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
