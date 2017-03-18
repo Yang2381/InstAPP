@@ -26,7 +26,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Do any additional setup after loading the view.
     }
 
+    //Logout 
     @IBAction func onLogout(_ sender: Any) {
+        
         PFUser.logOutInBackground { (error: Error?) in
             if error == nil {
                print("Logged out")
