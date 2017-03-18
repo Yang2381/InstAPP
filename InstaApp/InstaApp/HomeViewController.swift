@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import MBProgressHUD
 
 class HomeViewController: UIViewController {
 
@@ -16,6 +18,18 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOutInBackground { (error: Error?) in
+            if error == nil {
+               print("Logged out")
+                
+                //Once loggedout go to the loginView
+               let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginView")
+                self.show(vc!, sender: self)
+               
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

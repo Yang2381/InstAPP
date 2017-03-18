@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-
+import MBProgressHUD
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
@@ -26,8 +26,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func onSignin(_ sender: Any) {
         PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordFiled.text!) { (user: PFUser?, error: Error?) in
+            MBProgressHUD.showAdded(to: self.view, animated: true)
             if user != nil{
                 print("Login")
+                MBProgressHUD.hide(for: self.view, animated: true)
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
@@ -39,8 +41,10 @@ class LoginViewController: UIViewController {
         newUser.password = passwordFiled.text
         
         newUser.signUpInBackground { (success: Bool, error: Error?) in
+            MBProgressHUD.showAdded(to: self.view, animated: true)
             if success {
                 print("User Created")
+                MBProgressHUD.hide(for: self.view, animated: true)
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }else{
                 let code = (error as! NSError).code
