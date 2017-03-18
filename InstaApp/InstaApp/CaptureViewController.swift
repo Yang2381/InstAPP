@@ -17,6 +17,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +27,12 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-     
+        let mycolor: UIColor = UIColor.black
+        
+        descriptionText.layer.borderColor = mycolor.cgColor
+        descriptionText.layer.borderWidth = 3.0
+        
+
     }
     @IBAction func onSend(_ sender: Any) {
         //Show Spinning Circle 
@@ -75,6 +81,8 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     @IBAction func onLibary(_ sender: Any) {
+        
+        //Tells it to use the photo libary
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true
@@ -85,6 +93,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onCapture(_ sender: Any) {
+        //Uses the camera
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.allowsEditing = true

@@ -19,6 +19,7 @@
 		EB24C9171E7C7A6D002A53EB /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24C9161E7C7A6D002A53EB /* CaptureViewController.swift */; };
 		EB24C9191E7CA688002A53EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24C9181E7CA688002A53EB /* HomeViewController.swift */; };
 		EB24C91D1E7CBA1F002A53EB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24C91C1E7CBA1F002A53EB /* Post.swift */; };
+		EBC421A21E7CCF5300D90B3E /* tableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC421A11E7CCF5300D90B3E /* tableviewCell.swift */; };
 		FD721B4F839BDA264C3CD79A /* Pods_InstaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F93626C54AE805CAAEED86 /* Pods_InstaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		EB24C9161E7C7A6D002A53EB /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		EB24C9181E7CA688002A53EB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB24C91C1E7CBA1F002A53EB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EBC421A11E7CCF5300D90B3E /* tableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				EB24C91E1E7CC1FE002A53EB /* ViewControllers */,
 				EB24C8E61E7C639C002A53EB /* AppDelegate.swift */,
 				EB24C91C1E7CBA1F002A53EB /* Post.swift */,
+				EBC421A11E7CCF5300D90B3E /* tableviewCell.swift */,
 				EB24C8EA1E7C639C002A53EB /* Main.storyboard */,
 				EB24C8ED1E7C639C002A53EB /* Assets.xcassets */,
 				EB24C8EF1E7C639C002A53EB /* LaunchScreen.storyboard */,
@@ -466,6 +469,7 @@
 				EB24C9191E7CA688002A53EB /* HomeViewController.swift in Sources */,
 				EB24C9151E7C65EE002A53EB /* LoginViewController.swift in Sources */,
 				EB24C9171E7C7A6D002A53EB /* CaptureViewController.swift in Sources */,
+				EBC421A21E7CCF5300D90B3E /* tableviewCell.swift in Sources */,
 				EB24C91D1E7CBA1F002A53EB /* Post.swift in Sources */,
 				EB24C8E71E7C639C002A53EB /* AppDelegate.swift in Sources */,
 			);

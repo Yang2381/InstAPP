@@ -10,11 +10,19 @@ import UIKit
 import Parse
 import MBProgressHUD
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    var post: [PFObject]?
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        loadImage()
         // Do any additional setup after loading the view.
     }
 
@@ -35,7 +43,51 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let post = post{
+            return post.count
+        }else{
+            return 0
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableviewCell", for: indexPath) as! tableviewCell
+        
+        cell.post = post![indexPath.row]
+       
+        return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadImage()
+    }
+    
+/*******************************************************************************
+     loadImage function is to fetch data from parse server using PFQuery.
+     PFQuery somewhat like SQL.
+     Uses the findobjectsinbackground method to fetch the data
+ *******************************************************************************/
+    func loadImage(){
+        
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        query.findObjectsInBackground { (post: [PFObject]?, error: Error?) in
+            if let post = post {
+                
+                self.post = post
+                print(post)
+                self.tableView.reloadData()
+                
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
